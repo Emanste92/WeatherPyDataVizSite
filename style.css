@@ -1,0 +1,13 @@
+/* ET stylin' stylesheet on top of Bootstrap */
+
+/* This is for navbar css, see if I need to make a specific modded class for this */
+
+body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+.navbar {
+    margin-bottom: 10px;
+  }
+

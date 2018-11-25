@@ -5,56 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeatherPy Viz Site Home</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">WeatherPy Visualizations</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" target="_blank">Plot name here</a></li>
-                                <li><a href="#" target="_blank">Plot name here</a></li>
-                                <li><a href="#" target="_blank">Plot name here</a></li>
-                                <li><a href="#" target="_blank">Plot name here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#" target="_blank">Possible easter egg</a></li>
+        <div class="top-nav-bar">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                                <strong>WeatherPy Visualizations</strong></a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" target="_blank">Cloudiness</a></li>
+                                        <li><a href="#" target="_blank">Humidity</a></li>
+                                        <li><a href="#" target="_blank">Temperature (F)</a></li>
+                                        <li><a href="#" target="_blank">Wind Speed (mph)</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#" target="_blank">Possible easter egg</a></li> <!-- maybe an embedded jupyter notebook -->
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Comparisons</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Raw Data</a></li>
+                                <li class="active"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> About Project</a></li>
                             </ul>
-                        </li>
-                        <li><a href="#">Comparison</a></li>
-                        <li><a href="#">Raw Data</a></li>
-                        <li class="active"><a href="#">About Project</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
-        </nav>
-             
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->   
+                </nav>
+            </div>
+
         <div class="jumbotron"> <!-- Homescreen message -->
             <h1>WELCOME!</h1>
             <p>This site is for this WeatherPy project I did awhile back for UC Berkeley Extension Data Analytics Coding Bootcamp. You can find the GitHub project documents <a href="https://github.com/Emanste92/UCBEx_DataAnalytics/tree/master/WeatherPy" target="_blank">here</a>.</p>
-            <p> Even better, check out this embedded Jupyter notebook below. [REMEMBER TO INSERT]</p>
-            <a class="btn btn-lg btn-primary" href="https://github.com/Emanste92/UCBEx_DataAnalytics/blob/master/WeatherPy/ETE_WeatherPy.ipynb" role="button" target="_blank">View Jupyter notebook &raquo;</a>
-        </div>   
-    </div> <!-- /container -->
+            <p>[what went into this project... for more details on the process, check out "About Project" [LINK]</P>
+            <p>Click on any of the scatterplots below to learn more!</p>
+            <p>For those interested, check out the Jupyter notebook for the source code that generated these anslyses.</p>
+            <a class="btn btn-lg btn-primary" href="https://github.com/Emanste92/UCBEx_DataAnalytics/blob/master/WeatherPy/ETE_WeatherPy.ipynb" role="button" target="_blank"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> View Jupyter notebook &raquo;</a>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">  <!-- Main page bar nav -->
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <h2>Visualizations</h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="#"><img class = "img img-responsive" src="Resources/City Latitude vs Cloudiness (10-19-2018).png" style="width:100%" alt="Scatterplot of City Latitude vs Cloudiness for the date 10-19-2018"></a></div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="#"><img class = "img img-responsive" src="Resources/City Latitude vs Humidity (10-19-2018).png" style="width:100%" alt="Scatterplot of City Latitude vs Humidity for the date 10-19-2018"></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="#"><img class = "img img-responsive" src="Resources/City Latitude vs Temp (F) (10-19-2018).png" style="width:100%" alt="Scatterplot of City Latitude vs Temperature (F) for the date 10-19-2018"></a></div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="#"><img class = "img img-responsive" src="Resources/City Latitude vs Wind Speed (mph) (10-19-2018).png" style="width:100%" alt="Scatterplot of City Latitude vs Wind Speed (mph) for the date 10-19-2018"></a></div>
+                        </div>
+                    </div>
+                </div> <!-- /.panel -->
+            </div>
+        </div>
 
+        <div class="bs-docs-footer">
+            <div class="container">
+                <p>Emmanuel Edward Te &copy; 2017-2018</p>
+                <p>For educational purposes only in fulfillment of UC Berkeley Extension Data Analytics Bootcamp 2018-2019. All pictures are my own unless cited.</p>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                <br>
+                <p>Site design created with <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap <img src="https://getbootstrap.com/docs/3.3/assets/brand/bootstrap-solid.svg" style="height:22px; width:auto; padding:2px;"> 3.3.7</a>. Additional symbols made with <a href="https://www.glyphicons.com/" target="_blank">Glyphicons</a>.</p>
+            </div>
+        </div>
+
+    </div> <!-- /container -->
     <!-- Bootstrap core Javascript parts  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://bootstrapdocs.com/v3.3.6/docs/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://bootstrapdocs.com/v3.3.6/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>

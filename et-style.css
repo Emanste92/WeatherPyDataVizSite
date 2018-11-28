@@ -1,0 +1,81 @@
+/* ET stylin' stylesheet on top of Bootstrap */
+
+body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #99bbff;
+  }
+
+.navbar {
+    margin-bottom: 10px;
+  }
+
+/* .et-nav  */
+
+.jumbotron, .bs-docs-footer {
+    background-color: #e6e6e6;
+}
+
+.bs-docs-footer {
+    border: round;
+    padding-top: 10px;
+    padding-bottom: 5 px;
+    font-size: 11.5px;
+}
+
+.panel, .panel-body {
+    padding: 10px;
+}
+
+.et-blurb {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 20px;
+} 
+
+.btn, .btn-lg {
+    background-color: #1a66ff;
+}
+
+a:hover {
+    background-color: #66b5ff;
+}
+
+/* li:hover {
+    background-color: #cce6ff;
+} */
+
+/* specific bordering for home page */
+.et-img-border-home {
+    padding: 15px;
+}
+
+.et-img-border-home:hover {
+    background-color: #66b5ff;
+    border: 5px;
+}
+
+/* specific bordering for nav bar */
+.et-img-border {
+    padding: 5px;
+}
+
+.et-img-border:hover {
+    background-color: #66b5ff;
+    border: 5px;
+}
+
+.et-img-border-current {
+    padding: 5px;
+    background-color: #80c1ff;
+}
+
+/* media queries  --> need to fix */ 
+@media (max-width: 480px) {
+    .navbar li {
+      padding: 10px;
+    }
+  
+
+  }
+  

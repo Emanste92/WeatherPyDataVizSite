@@ -48,6 +48,11 @@ a:hover {
     padding: 15px;
 }
 
+.card-img-top {
+    width:100%;
+    height:auto;
+}
+
 /* specific bordering for home page */
 .et-img-border-home {
     padding: 15px;

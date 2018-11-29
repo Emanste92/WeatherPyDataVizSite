@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeatherPy Home</title>
+    <title>Comparisons</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="et-style.css">
 </head>
@@ -21,7 +21,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
-                                <strong>WeatherPy</strong></a>
+                                <strong>Comparisons</strong></a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
@@ -34,7 +34,7 @@
                                         <li><a href="windspeed.html">Wind Speed (mph)</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="comparisons.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Comparisons</a></li>
+                                <li clas="active"><a href="comparisons.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Comparisons</a></li>
                                 <li><a href="rawdata.html"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Raw Data</a></li>
                                 <li><a href="aboutproject.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> About Project</a></li>
                             </ul>
@@ -43,14 +43,10 @@
                 </nav>
             </div>
 
-        <div class="jumbotron"> <!-- Homescreen message -->
-            <h1>WELCOME!</h1>
-                <p>"<em>What's the weather like as we approach the equator?</em>"</p>
-                <p>It gets hotter, you say. True, but how does the data look like in support of this fact?</p>
-                <p>This site presents plots derived from a Python script that compiles weather data from 500+ cities around the world of varying distance from the equator. Built for the purposes of UC Berkeley Extension's Data Analytics Coding Bootcamp, this project is my work combining my growing knowledge of Python, API handling, data analysis, and visualization.</p>
-                <p>For more details on the process, check out <a href="aboutproject.html">About Project</a></P>
-                <p>Click on any of the scatterplots below to learn more! For those interested, check out the Jupyter notebook for the source code that generated these anslyses.</p>
-            <a class="btn btn-lg btn-primary" href="https://github.com/Emanste92/UCBEx_DataAnalytics/blob/master/WeatherPy/ETE_WeatherPy.ipynb" role="button" target="_blank"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> View Jupyter notebook &raquo;</a>
+        <div class="jumbotron"> <!-- Comparisons message -->
+            <h1>Comparisons</h1>
+            <p>From the visualizations presented here, we can see that of the four variables, latitude and temperature have the strongest relationship: citites with a latitude closer to 0 are warmer than those farther away in both positive and negative directions. Latitude has weak/negligible relationships between cloudiness and humidity, with significant ceilings at various parts of their respective plots that do not provide clear relationships. A case could be made for a weak relationship between latitude and humidity, with clustering in high levels regardless of latitude, which may hint at a possible relationship influenced by another variable not under consideration in the current dataset.</p>
+            <p>For more details on the process to reach these observations, check out <a href="aboutproject.html">About Project</a></P>
         </div> 
         
         <div class="row">

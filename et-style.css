@@ -10,8 +10,6 @@ body {
     margin-bottom: 10px;
   }
 
-/* .et-nav  */
-
 .jumbotron, .bs-docs-footer {
     background-color: #e6e6e6;
 }
@@ -41,9 +39,14 @@ a:hover {
     background-color: #66b5ff;
 }
 
-/* li:hover {
-    background-color: #cce6ff;
-} */
+.card {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.card-text {
+    padding: 15px;
+}
 
 /* specific bordering for home page */
 .et-img-border-home {
@@ -70,12 +73,10 @@ a:hover {
     background-color: #80c1ff;
 }
 
-/* media queries  --> need to fix */ 
+/* media queries */ 
 @media (max-width: 480px) {
     .navbar li {
       padding: 10px;
     }
-  
-
   }
-  
+/* seems like bootstrap classes handled most of the img resizing */

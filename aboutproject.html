@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="et-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav-bar">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                                <strong>WeatherPy</strong></a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="cloudiness.html">Cloudiness</a></li>
+                                        <li><a href="humidity.html">Humidity</a></li>
+                                        <li><a href="temperature.html">Temperature (F)</a></li>
+                                        <li><a href="windspeed.html">Wind Speed (mph)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="comparisons.html"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Comparisons</a></li>
+                                <li><a href="rawdata.html"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Raw Data</a></li>
+                                <li class="active"><a href="aboutproject.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> About Project</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->   
+                </nav>
+            </div>
+
+        <div class="row"> <!-- About Project text -->
+            <div class="col-md-9">
+                <h1>About This Project</h1>
+                <p>The goals of this project for the Data Analytics Coding Bootcamp were threefold:</p>
+                <ul>
+                    <li>Using Matplotlib and Pandas Python libraries, generate a series of clearly labeled scatter plots showcasing the following relationships:
+                        <ul>
+                            <li>Temperature (F) vs. Latitude</li>
+                            <li>Humidity (%) vs. Latitude</li>
+                            <li>Cloudiness (%) vs. Latitude</li>
+                            <li>Wind Speed (mph) vs. Latitude</li>
+                        </ul>
+                    </li>
+                    <li>Generate successive API calls to OpenWeatherMap <a href="https://openweathermap.org/api" target="_blank">Weather API</a> with a randomized list of 500+ unique cities based on latitude and longitide</li>
+                    <li>Generate and present all the code and analyses using a Jupyter notebook, supplying written descriptions of observable trends based on the data as well as well as exporting a csv of all the data and png images for each scatterplot.</li>
+                </ul>
+                <p>This project was a challenge to understand how to combine API calls with prior knowledge of Python, with particular emphasis on Pandas and Matplotlib as well as learning how to test code in snippets before running larger processes - in particular, understanding how a custom built Python library, <a href="https://github.com/wingchen/citipy" target="_blank">citipy</a> works in order to effectively make appropriate calls to Weather API. Some highlights during this process include creating a random set of latitude and longitude combinations, creating a random list of unique city names and their countries from the latitude/longitude pairings, making a loop of JSON requests that retrieved the data mentioned above, and then creating specific plots based on the data collected. The data was generated from weather API calls on 10-19-18 for 626 random cities.<p>
+                <p> We cannot make too many generalizations as this data is a day snapshot of the current weather of a randomized set of cities; however, it is fair to state that cities closer to the equator (with latitude closer to 0) are warmer than those farther away (with latitudes further away from 0 in both positive and negative directions). It was interesting to see that humidity is high for a good number of the cities in the dataset, regardless of latitude  (possibly explained by another variable not under consideration in this current project). There does not seem to be a strong relationship between latitude and cloudiness (I would also argue that the measurement of cloudiness by OWM and quite possibly the measurement of a unit of 'cloudiness' is somewhat arbitrary, and difficult to discern meaningful insight from such calculations, since there are distinct 'bands' which indicate numerous instances of the same level of cloudiness across cities regardless of latitude.) There seems to be a weak/negligible relationship between latitude and wind speed, with some minor clustering of low windspeeds in the higher latitudes/northern hemisphere. (This variable is probably best measured over time, not in a snapshot instance like the current dataset. Also, I would argue elevation as a third variable is necessary to determine whether there is a relationship between wind speed and latitude, which is not captured with the current dataset.)</p>
+                <p>In summary, we can indeed show that the weather does get hotter closer to the equator, even with a day's worth of compiled data of randomized cities around the world. More thorough analyses would include further considerations for important variables such as comparisons over time and city elevation.</p>
+                </p>Feel free to access the actual Github repo below to see all files used and generated:</p>
+                <a class="btn btn-lg btn-primary" href="https://github.com/Emanste92/UCBEx_DataAnalytics/tree/master/WeatherPy" role="button" target="_blank"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> View Github repo &raquo;</a>
+                <p> </p>
+                <br>
+            </div>
+
+            <div class="col-md-3">
+                <h3>About Me</h3>
+                <!-- Bootstrap About Me Card-->
+                <div class="card bg-info text-white text-center">
+                    <img class="card-img-top" src="Resources/me.jpg" width="250" alt="Picture of Emmanuel Edward Te">
+                    <div class="card-body">
+                        <h4 class="card-title">Emmanuel Edward Te</h4>
+                        <p class="card-text">Aspiring information professional and lifelong learner. Finding ways to bring data into his many interests at the intersections between psychology, theology, and library and information science.</p>
+                        <a href="https://www.linkedin.com/in/este92/" target="_blank" class="btn btn-primary">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.row About Project text-->
+
+        <div class="bs-docs-footer">
+            <div class="container">
+                <p>Emmanuel Edward Te &copy; 2017-2019</p>
+                <p>For educational purposes only. In fulfillment of UC Berkeley Extension Data Analytics Bootcamp 2018-2019. All pictures are my own unless cited.</p>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+                <br>
+                <p>Site design created with <a href="https://getbootstrap.com/docs/3.3/" target="_blank">Bootstrap <img src="https://getbootstrap.com/docs/3.3/assets/brand/bootstrap-solid.svg" style="height:22px; width:auto; padding:2px;"> 3.3.7</a>. Additional symbols made with <a href="https://www.glyphicons.com/" target="_blank">Glyphicons</a>. <a href="https://bootswatch.com/materia/" target="_blank">Materia</a> theme by <a href="https://bootswatch.com/" target="_blank">Bootswatch</a>.</p>
+            </div>
+        </div> <!-- /.footer -->
+    </div> <!-- /.container -->
+    
+    <!-- Bootstrap core Javascript parts  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://bootstrapdocs.com/v3.3.6/docs/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://bootstrapdocs.com/v3.3.6/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>
